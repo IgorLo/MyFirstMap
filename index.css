@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.leaflet-popup > .leaflet-popup-content-wrapper > .leaflet-popup-content {
+    width: 200px;
+}
+
+.popup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.popup > a {
+    font-size: 14pt;
+}
+
+.popup > label {
+    width: 80%;
+    display: flex;
+    align-items: center;
+}
+
+.popup > label > input {
+    margin: 3px;
+    padding: 5px;
+}
+
+.popup > label > div {
+    margin-right: 5px;
+}
+
+.coords {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.coords > span {
+    margin: 5px;
+}
+
+#main {
+
+}
+
+#buttons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    z-index: 100;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    margin: 8px;
+
+    overflow: hidden;
+
+    border-width: 0;
+    outline: none;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+
+    background-color: #807a73;
+    color: #ecf0f1;
+
+    transition: background-color .3s;
+}
+
+.btn:hover, .btn:focus {
+    background-color: #a7a199;
+}
+
+.btn.safe {
+    background-color: #49813b;
+}
+.btn.safe:hover, .btn.safe:focus {
+    background-color: #6ba95b;
+}
+
+.btn.danger {
+    background-color: #81493b;
+}
+.btn.danger:hover, .btn.danger:focus {
+    background-color: #ac6c5c;
+}
+
+.btn.add {
+    background-color: #436391;
+}
+.btn.add:hover, .btn.add:focus {
+    background-color: #6b90c6;
+}
+
+.btn > * {
+    position: relative;
+}
+
+.btn span {
+    display: block;
+    padding: 12px 24px;
+}
+
+.btn:before {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    display: block;
+    width: 0;
+    padding-top: 0;
+
+    border-radius: 100%;
+
+    background-color: rgba(236, 240, 241, .3);
+
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.btn:active:before {
+    width: 120%;
+    padding-top: 120%;
+
+    transition: width .2s ease-out, padding-top .2s ease-out;
+}
+
+#map.crosshair {
+    cursor: crosshair;
+}

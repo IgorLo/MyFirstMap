@@ -1,0 +1,42 @@
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+    <script src="vue.js"></script>
+</head>
+<body>
+
+<div id="map"></div>
+<div id="buttons">
+    <button class="btn add" type="button" onclick="createCircle()">
+        <span>+ Круг</span>
+    </button>
+    <button class="btn add" type="button" onclick="createMarker()">
+        <span>+ Маркер</span>
+    </button>
+    <button class="btn" type="button" onclick="loadDefault()">
+        <span>Default</span>
+    </button>
+    <button class="btn" type="button" onclick="load()">
+        <span>Загрузить</span>
+    </button>
+    <button class="btn safe" type="button" onclick="save()">
+        <span>Сохранить</span>
+    </button>
+    <button class="btn danger" type="button" onclick="clearMap()">
+        <span>Удалить</span>
+    </button>
+</div>
+
+
+<script type='text/javascript' src='markers.js'></script>
+<script type='text/javascript' src='index.js'></script>
+</body>
+</html>
